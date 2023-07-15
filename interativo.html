@@ -12,27 +12,17 @@
       font-size: 24px;
       color: #fff;
     }
-
-    .message {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 100%;
-    }
   </style>
 </head>
 <body>
-  <div class="message">
-    <script>
-      function exibirMensagem() {
-        var mensagem = "Como voce esta?";
-        alert(mensagem);
-      }
+  <div id="message">Como você está</div>
 
-      // Chamada da função após 3 segundos
-      setTimeout(exibirMensagem, 3000);
-    </script>
-  </div>
+  <script>
+    setTimeout(function() {
+      var messageElement = document.getElementById("message");
+      messageElement.style.display = "none";
+    }, 3000);
+  </script>
 </body>
 </html>
+
